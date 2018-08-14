@@ -3,7 +3,6 @@ package com.service;
 import org.apache.ibatis.session.SqlSession;
 
 import com.config.MySqlSessionFactory;
-import com.dao.CartDAO;
 import com.dao.MemberDAO;
 import com.dto.MemberDTO;
 
