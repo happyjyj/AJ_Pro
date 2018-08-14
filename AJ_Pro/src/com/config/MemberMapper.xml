@@ -11,4 +11,9 @@
    values(um_id_seq.nextval,#{um_loginid},#{um_passwd},#{um_name},#{um_email},#{um_tel},#{um_photo},#{um_photo_bg})
 	</insert>
 
+	<select id="memberLogin" resultType="MemberDTO" parameterType="hashmap">
+	select um_name from usermember
+	where um_loginid like #{um_loginid} and um_passwd like #{um_passwd}
+	</select>
+
 </mapper>

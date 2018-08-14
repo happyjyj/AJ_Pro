@@ -14,12 +14,23 @@
 	<c:if test="${!empty success}">
 		<script type="text/javascript">
 			alert('${success}');
-		</script> 
+		</script>
 	</c:if>
+<%-- 	<c:if test="${!empty login}"> --%>
+<!-- 		<script type="text/javascript"> -->
+<%--  			alert('${login}'); --%>
+<!-- 		</script> -->
+<%-- 	</c:if> --%>
 	<h1>여행스케치</h1>
 	<hr>
-<a href="MemberForm.jsp">회원가입</a>
-<a href="MemberLogin.jsp">로그인</a>
+	<c:if test="${empty login}">
+		<a href="MemberForm.jsp">회원가입</a>
+		<a href="MemberLogin.jsp">로그인</a>
+	</c:if>
+	<c:if test="${!empty login}">
+		<a href="MemberForm.jsp">회원가입</a>
+		<a href="">로그아웃</a>
+	</c:if>
 </body>
 </html>
 
